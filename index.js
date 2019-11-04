@@ -7,6 +7,12 @@ console.log(suit[x]);
 let y = Math.floor(Math.random() * number.length);
 console.log(number[y]);
 
-document.querySelector(".leftdisplaysuit").innerHTML=suit[x];
-document.querySelector(".centerdisplaynumber").innerHTML=number[y];
-document.querySelector(".rightdisplaysuit").innerHTML=suit[x];
+if (suit[x] == "&#9829" || suit[x] == "&#9830") {
+    document.querySelector(".leftdisplaysuit").style.color = "red";
+    document.querySelector(".rightdisplaysuit").style.color = "red";
+}
+
+document.querySelector(".leftdisplaysuit").innerHTML = suit[x];
+document.querySelector(".centerdisplaynumber").innerHTML = number[y];
+document.querySelector(".rightdisplaysuit").innerHTML = suit[x];
+
